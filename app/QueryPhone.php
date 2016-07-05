@@ -26,7 +26,7 @@ class QueryPhone
      * */
 
     public static function verifyPhone($phone = null) {
-
+     
         $ret = false;
         if ($phone) {
             if (preg_match('/^1[34578]{1}\d{9}/',$phone)) {
