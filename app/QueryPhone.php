@@ -9,11 +9,11 @@ use libs\ImHttpRequest;
  */
 class QueryPhone
 {
-    const TAOBAO_API = 'https://tcc.taobao.com/cc/json/mobile_tel_segment.html';
+    const TAOBAO_API = 'https://tcc.taobao.com/cc/json/mobile_tel_segment.htm';
 
     public static function query($phone) {
 
-        if (self::verifyPhone('15363469159')) {
+        if (self::verifyPhone($phone)) {
             ImHttpRequest::request(self::TAOBAO_API,['tel' => $phone]);
         };
 
@@ -34,7 +34,6 @@ class QueryPhone
             }
         }
         return $ret;
-
     }
 
 }
